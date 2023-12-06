@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    background-image: url("../images/jdmback.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.title div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title .title-2 {
+    left: 50.4%;
+}
+@media screen and (max-width: 1450px) {
+    .title svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.active {
+    color: #F2B96F;
+    border-bottom: 0.15rem solid #F2B96F;
+}
+
+nav {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translate(-50%, -12%);
+    width: 40rem;
+    font-family: "Source Code Pro", monospace;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    transition: all 0.2s ease-in-out;
+    font-size: 1.2rem;
+}
+
+nav a:hover, nav a:focus {
+    color: #F2B96F;
+}
+
+footer {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -2%);
+    display: flex;
+    font-size: 0.8rem;
+}
+
+footer .nickname-1 {
+    color: #F2B96F;
+}
+
+footer .nickname-2 {
+    color: white;
+}
+
+@media screen and (max-width: 660px) {
+
+    .title div {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+    }
+
+    nav {
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translate(-55%, -6%);
+        width: 8rem;
+    }
+
+    nav, ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav, ul, li {
+        font-size: 0.8rem;
+        margin: 0.5rem;
+    }
+
+    footer {
+        font-size: 0.5rem;
+    }
+}

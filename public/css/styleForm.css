@@ -1,0 +1,50 @@
+*{
+    color: white;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem 0 5rem;
+}
+
+.field_label {
+    font-size: 13px;
+    padding-block: 4px;
+    display: inline-block;
+}
+
+.field_input {
+    width: 100%;
+    padding: 8px 15px;
+    cursor: auto;
+    background-color: #a2a2a2;
+    color: white;
+    border: 0;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    min-width: 20%;
+    line-height: 1.4;
+}
+
+.btn-submit{
+    padding: 5px;
+    cursor: pointer;
+    transform: translate(200%, 0%);
+    width: 20%;
+    background-color: #e6962dab;
+}
+
+@media screen and (max-width: 755px){
+    .main-content{
+        border: none;
+    }
+
+    .field{
+        padding: 0 2rem 0 2rem;
+    }
+    .btn-submit{
+        margin-top: -0.2rem;
+    }
+}
