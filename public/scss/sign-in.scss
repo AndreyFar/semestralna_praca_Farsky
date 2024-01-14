@@ -1,0 +1,12 @@
+$basic-color: white;
+
+.container{
+    top: 45%;
+    height: 380px;
+
+    .question{
+      color: $basic-color;
+      font-size: 0.65rem;
+      text-align: center;
+    }
+}
