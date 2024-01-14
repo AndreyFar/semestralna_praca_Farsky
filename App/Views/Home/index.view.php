@@ -1,3 +1,7 @@
+<div class="login">
+    <button type="button" class="button-54">Sign in</button>
+    <button type="button" class="button-54">Sign out</button>
+</div>
 <div class="title">
     <div class="title-1">
         <svg xmlns="http://www.w3.org/2000/svg" width="1441" height="240" viewBox="0 0 1441 240">
