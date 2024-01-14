@@ -1,0 +1,15 @@
+$primary-color: white;
+$link-color: #F2B96F;
+
+.container{
+  color: $primary-color;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+
+  a{
+    color: $link-color;
+  }
+}

@@ -4,9 +4,15 @@
 /** @var \App\Core\LinkGenerator $link */
 ?>
 
-<div class="login">
-    <a href="<?= $link->url('auth.login') ?>" class="button-54">Login</a>
-    <a href="<?= $link->url('auth.register') ?>" class="button-54">Sign in</a>
+<div class="<?php echo $auth->isLogged() ? 'welcome' : 'login'; ?>">
+    <?php if ($auth->isLogged()) : ?>
+        Vitajte, <?= $auth->getLoggedUserName() ?>
+        <br>
+        <a href="<?= $link->url('auth.logout')?>" class="button-54">Log out</a>
+    <?php else : ?>
+        <a href="<?= $link->url('auth.login') ?>" class="button-54">Login</a>
+        <a href="<?= $link->url('auth.register') ?>" class="button-54">Sign in</a>
+    <?php endif; ?>
 </div>
 <div class="title">
     <div class="title-1">

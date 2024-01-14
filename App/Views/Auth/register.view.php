@@ -12,7 +12,7 @@ $layout = 'auth';
     <div class="message">
         <?= @$data['message'] ?>
     </div>
-    <form class="form-signin" method="post" action="<?= $link->url("auth.register") ?>">
+    <form class="form-signin" method="post" action="<?= $link->url("user.add") ?>">
         <div class="form-label">
             <input name="login" type="text" id="login" class="form-control" placeholder="Username" required autofocus>
         </div>
@@ -26,7 +26,7 @@ $layout = 'auth';
         </div>
 
         <div class="form-label">
-            <input name="special_code" type="text" id="code" class="form-control" placeholder="Special code">
+            <input name="code" type="text" id="code" class="form-control" placeholder="Special code">
         </div>
         <div class="question">register as <strong>admin</strong>? type the special code..</div>
 

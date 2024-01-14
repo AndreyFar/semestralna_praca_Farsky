@@ -4,7 +4,7 @@ $layout = 'auth';
 /** @var \App\Core\LinkGenerator $link */
 ?>
 
-<link rel="stylesheet" href="public/css/sign-in.css">
+<link rel="stylesheet" href="public/css/sign.css">
 
 <div class="container">
     <h1>Sign in</h1>
