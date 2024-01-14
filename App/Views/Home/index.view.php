@@ -1,6 +1,12 @@
+<?php
+/** @var string $contentHTML */
+/** @var \App\Core\IAuthenticator $auth */
+/** @var \App\Core\LinkGenerator $link */
+?>
+
 <div class="login">
-    <button type="button" class="button-54">Sign in</button>
-    <button type="button" class="button-54">Sign out</button>
+    <a href="<?= $link->url('auth.login') ?>" class="button-54">Login</a>
+    <a href="<?= $link->url('auth.register') ?>" class="button-54">Sign in</a>
 </div>
 <div class="title">
     <div class="title-1">
