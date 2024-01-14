@@ -33,7 +33,7 @@
     cursor: pointer;
     transform: translate(200%, 0%);
     width: 20%;
-    background-color: #F2B96F;
+    background-color: #2cf12c;
 }
 
 @media screen and (max-width: 755px){
