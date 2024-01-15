@@ -24,11 +24,18 @@ class UserController extends AControllerBase
         $user = new User();
 
         $user->setName($formData['login']);
-        $user->setPassword($formData['password']);
-
-        if(empty(trim($formData['code']))){
-            $user->setIsAdmin($formData['code']);
+        if($formData['password'] != $formData['confirm_password']){
+            return $this->redirect($this->url("auth.register"));
         }
+
+        //hashovanie hesla
+        $loginHeslo=$formData['password'];
+        $nasada = bin2hex(random_bytes(16));
+        $hashHesla=password_hash($nasada . $loginHeslo, PASSWORD_DEFAULT);
+
+        $user->setNasada($nasada);
+        $user->setPassword($hashHesla);
+        $user->setIsAdmin($formData['code']);
 
         $user->save();
         return $this->redirect($this->url("auth.login"));

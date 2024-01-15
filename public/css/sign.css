@@ -59,6 +59,14 @@
   background-color: #eebd87;
   transition: all 0.3s ease-in-out;
 }
+.container .back {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.65rem;
+  color: white;
+}
 
 @media screen and (max-width: 755px) {
   .container {

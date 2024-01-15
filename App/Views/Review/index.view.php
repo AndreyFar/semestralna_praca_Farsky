@@ -2,6 +2,7 @@
 $layout = 'shop';
 /** @var Array $data */
 /** @var \App\Core\LinkGenerator $link */
+/** @var \App\Core\IAuthenticator $auth */
 ?>
 
 <link rel="stylesheet" href="public/css/styleBox.css">
@@ -10,6 +11,14 @@ $layout = 'shop';
     <div class="top-container">
         <a href="<?= $link->url('review.add') ?>" class="btn-add-review">ADD new</a>
         <h1>Reviews</h1>
+        <div class="customer">
+            <p class="log">Logged in as</p>
+            <?php if ($auth->isLogged()) : ?>
+                <h5><strong><?= $auth->getLoggedUserName() ?></strong></h5>
+            <?php else : ?>
+                <h5><strong>guest</strong></h5>
+            <?php endif; ?>
+        </div>
     </div>
     <div class="reviews">
         <ul>
@@ -21,10 +30,13 @@ $layout = 'shop';
                         <div class="message"><?= $review->getComment() ?></div>
                         <div class="date"><?= $review->getCreatedAt() ?></div>
                     </div>
-                    <div class="buttons">
-                        <a href="<?= $link->url('review.edit', ['id'=>$review->getId()])?>" class="btn-edit">Edit</a>
-                        <a href="<?= $link->url('review.delete', ['id'=>$review->getId()])?>" class="btn-delete">Delete</a>
-                    </div>
+                    <?php if ($auth->isLogged()&&$review->getUserName()==$auth->getLoggedUserName() || $auth->isLogged()&&$auth->isLoggedUserAdmin()) : ?>
+                        <div class="buttons">
+                            <a href="<?= $link->url('review.edit', ['id'=>$review->getId()])?>" class="btn-edit">Edit</a>
+                            <a href="<?= $link->url('review.delete', ['id'=>$review->getId()])?>" class="btn-delete">Delete</a>
+                        </div>
+                    <?php else : ?>
+                    <?php endif; ?>
                 </li>
             <?php endforeach?>
         </ul>

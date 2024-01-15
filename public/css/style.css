@@ -30,7 +30,7 @@ body {
     position: absolute;
     top: 25%;
     left: 50%;
-    transform: translate(-35%, -50%);
+    transform: translate(-50%, -25%);
     color: white;
     font-size: 2rem;
 }
@@ -131,6 +131,11 @@ footer .nickname-2 {
 }
 
 @media screen and (max-width: 660px) {
+
+    .welcome{
+        margin-top: 10px;
+        font-size: 1rem;
+    }
 
     .login{
         width: 100px;

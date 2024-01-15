@@ -3,6 +3,7 @@
 namespace App\Auth;
 
 use App\Core\IAuthenticator;
+use App\Models\User;
 
 /**
  * Class DummyAuthenticator
@@ -11,10 +12,6 @@ use App\Core\IAuthenticator;
  */
 class DummyAuthenticator implements IAuthenticator
 {
-    public const LOGIN = "admin";
-    public const PASSWORD_HASH = '$2y$10$GRA8D27bvZZw8b85CAwRee9NH5nj4CQA6PDFMc90pN9Wi4VAWq3yq'; // admin
-    public const USERNAME = "Admin";
-
     /**
      * DummyAuthenticator constructor
      */
@@ -32,8 +29,22 @@ class DummyAuthenticator implements IAuthenticator
      */
     public function login($login, $password): bool
     {
-        if ($login == self::LOGIN && password_verify($password, self::PASSWORD_HASH)) {
-            $_SESSION['user'] = self::USERNAME;
+        $id=null;
+        $users=User::getAll();
+
+        foreach ($users as $user){
+            if($user->getName() == $login){
+                $id=$user->getId();
+                break;
+            }
+        }
+        $user = User::getOne($id);
+
+        // Kontrola, či sa používateľ našiel a heslo sa zhoduje
+        if ($user && password_verify($user->getNasada() . $password, $user->getPassword())) {
+            //Prihlásenie úspešné, uloženie informácií do session
+            $_SESSION['user'] = $user->getName();
+            $_SESSION['admin'] = $user->getIsAdmin();
             return true;
         } else {
             return false;
@@ -59,6 +70,14 @@ class DummyAuthenticator implements IAuthenticator
     public function getLoggedUserName(): string
     {
         return isset($_SESSION['user']) ? $_SESSION['user'] : throw new \Exception("User not logged in");
+    }
+
+    public function isLoggedUserAdmin(): bool
+    {
+        if($_SESSION['admin'] == ''){
+            return false;
+        }
+        return true;
     }
 
     /**

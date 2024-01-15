@@ -34,4 +34,5 @@ $layout = 'auth';
             <button class="btn button-54" type="submit" name="submit">Submit</button>
         </div>
     </form>
+    <a href="<?= $link->url('home.index')?>" class="home">Back</a>
 </div>

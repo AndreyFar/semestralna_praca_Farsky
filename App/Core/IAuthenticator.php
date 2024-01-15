@@ -30,6 +30,12 @@ interface IAuthenticator
     public function getLoggedUserName(): string;
 
     /**
+     * Return true if logged user is admin
+     * @return bool
+     */
+    public function isLoggedUserAdmin(): bool;
+
+    /**
      * Return id of a logged user
      * @return mixed
      */

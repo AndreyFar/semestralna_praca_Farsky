@@ -22,6 +22,17 @@ class ReviewController extends AControllerBase
         ]);
     }
 
+    public function authorize($action):bool
+    {
+        switch ($action) {
+            //ak chces pridavat recenziu, musis byt prihlaseny
+            case 'add':
+                return $this->app->getAuth()->isLogged();
+            default:
+                return true;
+        }
+    }
+
     public function add():Response{
         return $this->html();
     }
@@ -44,9 +55,9 @@ class ReviewController extends AControllerBase
 
         if (is_null($review)) {
             $review = new Review();
+            $review->setUserName($this->app->getAuth()->getLoggedUserName());
         }
 
-        $review->setUserName($this->request()->getValue('name'));
         $review->setPicture($this->request()->getValue('picture'));
         $review->setComment($this->request()->getValue('comment'));
 

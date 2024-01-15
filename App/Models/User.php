@@ -7,6 +7,20 @@ use App\Core\Model;
 class User extends Model
 {
     protected ?int $id;
+    protected ?string $name;
+    protected ?string $password;
+    protected ?string $isAdmin;
+    protected ?string $nasada;
+
+    public function getNasada(): ?string
+    {
+        return $this->nasada;
+    }
+
+    public function setNasada(?string $nasada): void
+    {
+        $this->nasada = $nasada;
+    }
 
     public function getId(): ?int
     {
@@ -47,7 +61,4 @@ class User extends Model
     {
         $this->isAdmin = $isAdmin;
     }
-    protected ?string $name;
-    protected ?string $password;
-    protected ?string $isAdmin;
 }

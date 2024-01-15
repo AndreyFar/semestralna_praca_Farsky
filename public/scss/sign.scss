@@ -73,6 +73,15 @@ $message-color: #F2B96F;
     transition: all 0.3s ease-in-out;
   }
 
+  .back{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.65rem;
+    color: white;
+  }
+
 }
 
 @media screen and (max-width: 755px){

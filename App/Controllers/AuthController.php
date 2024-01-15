@@ -54,7 +54,6 @@ class AuthController extends AControllerBase
 
     public function register(): Response
     {
-
         return $this->html();
     }
 }

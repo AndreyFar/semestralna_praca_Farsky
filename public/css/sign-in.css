@@ -7,5 +7,13 @@
   font-size: 0.65rem;
   text-align: center;
 }
+.container .home {
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.65rem;
+  color: white;
+}
 
 /*# sourceMappingURL=sign-in.css.map */
