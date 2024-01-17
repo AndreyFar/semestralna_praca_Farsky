@@ -6,5 +6,6 @@ $layout = 'shop';
 
 <div class="map">
     <h1>Shipping</h1>
-    <img src="public/images/world-map.png">
+    <p>orange areas represent countries, where we can send our products</p>
+    <img src="public/images/world.png">
 </div>

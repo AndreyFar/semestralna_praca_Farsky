@@ -3,12 +3,20 @@
 }
 
 .map h1 {
-  margin-top: 5px;
+  margin: 5px 0 5px 0;
+  color: white;
+  text-align: center;
+}
+.map i {
+  color: white;
+  width: 5px;
+}
+.map p {
   color: white;
   text-align: center;
 }
 .map img {
-  width: 70%;
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;

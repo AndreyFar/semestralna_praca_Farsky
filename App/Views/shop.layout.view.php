@@ -26,8 +26,10 @@
                 <div class="cart">
                     <h3>CART</h3>
                     <p>0 items in cart</p>
-                    <button class="view-cart">view cart</button>
-                    <button class="shop-more">shop more</button>
+                    <div class="btns">
+                        <a href="" class="view-cart">view cart</a>
+                        <a href="<?= $link->url('product.index') ?>" class="shop-more">shop more</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,9 +44,9 @@
             <li><a href="<?= $link->url('home.index') ?>">Home</a></li>
             <li><a href="">Shop</a></li>
             <li><a href="<?= $link->url('review.index') ?>">Feedback</a></li>
-            <li><a href="">Shipping</a></li>
+            <li><a href="<?= $link->url('home.ship') ?>">Shipping</a></li>
             <li><a href="">Sizing</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="<?= $link->url('home.contact') ?>">Contact</a></li>
             <li><a href="">Legacy</a></li>
         </ul>
     </nav>
