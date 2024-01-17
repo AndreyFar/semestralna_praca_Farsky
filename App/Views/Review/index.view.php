@@ -11,14 +11,6 @@ $layout = 'shop';
     <div class="top-container">
         <a href="<?= $link->url('review.add') ?>" class="btn-add-review">ADD new</a>
         <h1>Reviews</h1>
-        <div class="customer">
-            <p class="log">Logged in as</p>
-            <?php if ($auth->isLogged()) : ?>
-                <h5><strong><?= $auth->getLoggedUserName() ?></strong></h5>
-            <?php else : ?>
-                <h5><strong>guest</strong></h5>
-            <?php endif; ?>
-        </div>
     </div>
     <div class="reviews">
         <ul>

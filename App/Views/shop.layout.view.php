@@ -1,6 +1,7 @@
 <?php
 /** @var string $contentHTML */
 /** @var \App\Core\LinkGenerator $link */
+/** @var \App\Core\IAuthenticator $auth */
 ?>
 
 <!doctype html>
@@ -37,6 +38,19 @@
         <div class="main-content">
             <?= $contentHTML ?>
         </div>
+
+        <div class="cart-bar">
+            <div class="customer">
+                <p class="log">Logged in as</p>
+                <?php if ($auth->isLogged()) : ?>
+                    <h5><strong><?= $auth->getLoggedUserName() ?></strong></h5>
+                    <a href="<?= $link->url('auth.logout')?>" class="button-54">Log out</a>
+                <?php else : ?>
+                    <h5><strong>guest</strong></h5>
+                <?php endif; ?>
+            </div>
+        </div>
+
     </div>
 
     <nav class="nav-links" id="menu">

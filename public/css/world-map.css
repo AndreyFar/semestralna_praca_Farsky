@@ -26,10 +26,11 @@
 @media screen and (max-width: 755px) {
   .main-content {
     border: none;
-    height: 90%;
+    height: 80%;
   }
 
   .map img {
+    top:55%;
     width: 80%;
   }
 }
