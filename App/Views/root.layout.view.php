@@ -26,10 +26,10 @@
     <ul>
         <li><a href="<?= $link->url('home.index') ?>">Home</a></li>
         <li><a href="">Shop</a></li>
-        <li><a href="<?= $link->url('review.index')?>">Feedback</a></li>
-        <li><a href="">Shipping</a></li>
+        <li><a href="<?= $link->url('review.index') ?>">Feedback</a></li>
+        <li><a href="<?= $link->url('home.ship') ?>">Shipping</a></li>
         <li><a href="">Sizing</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="<?= $link->url('home.contact') ?>">Contact</a></li>
         <li><a href="">Legacy</a></li>
     </ul>
 </nav>
