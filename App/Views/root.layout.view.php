@@ -25,7 +25,7 @@
 <nav>
     <ul>
         <li><a href="<?= $link->url('home.index') ?>">Home</a></li>
-        <li><a href="">Shop</a></li>
+        <li><a href="<?= $link->url('product.index') ?>">Shop</a></li>
         <li><a href="<?= $link->url('review.index') ?>">Feedback</a></li>
         <li><a href="<?= $link->url('home.ship') ?>">Shipping</a></li>
         <li><a href="">Sizing</a></li>

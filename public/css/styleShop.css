@@ -29,10 +29,8 @@ body {
 }
 
 .cart-box {
-    width: 100%;
-    margin-left: 15px;
+    width: 85%;
     display: grid;
-    padding: 15px 15px 15vh 15px;
 }
 
 .banner {
@@ -81,22 +79,6 @@ body {
     margin-top: 7vh;
     padding: 10px;
     overflow-x: hidden;
-}
-
-.filter {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    margin-inline: 10px;
-    max-width: 100%;
-    column-gap: 10px;
-    flex-wrap: wrap;
-    row-gap: 2px;
-    margin-bottom: 5px;
-}
-
-.filter a {
-    color: white;
 }
 
 .collection {
@@ -277,6 +259,7 @@ footer .nickname-2 {
         padding-inline: 15px;
         padding-block: 10px;
         height: 100%;
+        width: 100%;
         align-items: flex-end;
     }
 
