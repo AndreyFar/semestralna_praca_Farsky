@@ -28,7 +28,7 @@
                     <h3>CART</h3>
                     <p>0 items in cart</p>
                     <div class="btns">
-                        <a href="" class="view-cart">view cart</a>
+                        <a href="<?= $link->url('item.index') ?>" class="view-cart">view cart</a>
                         <a href="<?= $link->url('product.index') ?>" class="shop-more">shop more</a>
                     </div>
                 </div>
@@ -44,7 +44,6 @@
                 <p class="log">Logged in as</p>
                 <?php if ($auth->isLogged()) : ?>
                     <h5><strong><?= $auth->getLoggedUserName() ?></strong></h5>
-                    <a href="<?= $link->url('auth.logout')?>" class="button-54">Log out</a>
                 <?php else : ?>
                     <h5><strong>guest</strong></h5>
                 <?php endif; ?>

@@ -9,12 +9,12 @@ $second-color: #F2B96F;
 
   .top-container {
     .btn-add-product {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       position: absolute;
-      left: 2px;
+      left: 3px;
       color: $primary-color;
-      border: 2px solid white;
-      padding: 4px;
+      border: 1px solid white;
+      padding: 3px 6px;
     }
   }
 
@@ -30,6 +30,15 @@ $second-color: #F2B96F;
     a{
       color: $primary-color;
     }
+  }
+
+  .message{
+    position: fixed;
+    top:4%;
+    left: 50%;
+    transform: translate(-50%,-4%);
+    color: $second-color;
+    font-size: 1rem;
   }
 
   .products {
@@ -67,7 +76,7 @@ $second-color: #F2B96F;
         top: 4px;
         right: 8px;
         color: black;
-        z-index: 100;
+        z-index: 2;
       }
     }
   }
@@ -83,6 +92,11 @@ $second-color: #F2B96F;
         margin-bottom: 32px;
       }
     }
+    .top-container {
+      .btn-add-product {
+        display: none;
+      }
+    }
   }
 }
 
@@ -96,6 +110,11 @@ $second-color: #F2B96F;
         grid-template-columns: repeat(2, calc(48vw - 10px));
         grid-gap: 0.2rem 0.2rem;
         margin-bottom: 32px;
+      }
+    }
+    .top-container {
+      .btn-add-product {
+        display: none;
       }
     }
   }

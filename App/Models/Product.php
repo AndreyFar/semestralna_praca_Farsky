@@ -36,6 +36,16 @@ class Product extends Model
         $this->title = $title;
     }
 
+    public function getCategory(): ?string
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?string $category): void
+    {
+        $this->category = $category;
+    }
+
     public function getPrice(): ?int
     {
         return $this->price;

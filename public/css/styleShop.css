@@ -171,11 +171,11 @@ footer .nickname-2 {
 .menu-btn {
     color: white;
     border: none;
-    background: rgba(242, 185, 111, 0.44);
+    background: rgba(242, 185, 111, 0.62);
     display: none;
     text-align: center;
-    padding-inline: 10px;
-    padding-block: 10px;
+    padding-inline: 12px;
+    padding-block: 13px;
     position: fixed;
     font-size: 16px;
     bottom: 0;
@@ -220,6 +220,7 @@ footer .nickname-2 {
 
     .menu-btn {
         display: block;
+        z-index: 1000;
     }
 
     .container {
@@ -288,6 +289,14 @@ footer .nickname-2 {
         margin-bottom: 32px;
     }
 
+    .customer{
+        border: none;
+        position: fixed;
+        bottom: 0;
+        text-align: end;
+        background: rgba(255, 255, 255, 0.3);
+    }
+
     footer {
         display: none;
     }
@@ -304,10 +313,12 @@ footer .nickname-2 {
         margin-left: -100%;
         transition: all 0.5s ease;
         padding-top: 200px;
+        z-index: 10;
     }
 
     .mobile-menu {
         margin-left: 0;
+
     }
 
     nav, ul {

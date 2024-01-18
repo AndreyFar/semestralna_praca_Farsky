@@ -10,7 +10,7 @@ $layout = 'shop';
 <div class="container-products">
     <div class="top-container">
         <?php if ($auth->isLogged()&&$auth->isLoggedUserAdmin()) : ?>
-            <a href="<?= $link->url('product.add') ?>" class="btn-add-product">ADD new</a>
+            <a href="<?= $link->url('product.add') ?>" class="btn-add-product">add</a>
         <?php else : ?>
         <?php endif; ?>
     </div>
@@ -22,6 +22,9 @@ $layout = 'shop';
         <a href="<?= $link->url('product.filter', ['category'=>'sneakers'])?>">Sneakers</a>
         <a href="<?= $link->url('product.filter', ['category'=>'accessories'])?>">Accessories</a>
     </div>
+    <?php if ($data['message'] != "") : ?>
+        <div class="message"><?=$data['message']?></div>
+    <?php endif; ?>
     <div class="products">
         <ul class="products-wraper">
             <?php foreach($data['products'] as $product) :?>
