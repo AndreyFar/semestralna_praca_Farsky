@@ -39,7 +39,7 @@ body {
     background-image: url("/public/images/banner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 10rem 0 2rem 0;
+    margin: 5rem 0 2rem 0;
     border: 0.15rem solid white;
 }
 
@@ -81,28 +81,8 @@ body {
     overflow-x: hidden;
 }
 
-.collection {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    margin-left: 10px;
-}
-
-.collection-wraper {
-    display: grid;
-    grid-template-columns: repeat(4, 142px);
-    grid-gap: 0.2rem 0.2rem;
-    margin-bottom: 32px;
-}
-
-.product {
-    height: 10rem;
-    width: 100%;
-    border: 1px solid white;
-}
-
 .customer{
-    width: 70%;
+    width: 85%;
     border: solid 2px white;
     color: white;
     font-size: 0.75rem;
