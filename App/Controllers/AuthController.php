@@ -38,7 +38,7 @@ class AuthController extends AControllerBase
             }
         }
 
-        $data = ($logged === false ? ['message' => 'Zlý login alebo heslo!'] : []);
+        $data = ($logged === false ? ['message' => 'Incorrect login or password!'] : []);
         return $this->html($data);
     }
 

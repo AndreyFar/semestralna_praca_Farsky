@@ -15,9 +15,15 @@
         <input class="field_input" type="text" id="title" name="title" value="" required>
     </div>
 
-    <div class="field">
-        <label class="field_label" for="category">Category</label>
-        <input class="field_input" type="text" id="category" name="category" value="" required>
+    <div class="category">
+        <select name="category" required>
+            <option value="">Select category</option>
+            <option value="tops">Tops</option>
+            <option value="pants">Pants</option>
+            <option value="jackets">Jackets</option>
+            <option value="sneakers">Sneakers</option>
+            <option value="accessories">Accessories</option>
+        </select>
     </div>
 
     <div class="field">
@@ -27,7 +33,7 @@
 
     <div class="field">
         <label class="field_label" for="price">Price</label>
-        <input class="field_input" type="text" id="price" name="price" value="" required>
+        <input class="field_input" type="number" id="price" name="price" min="0" step="1" required>
     </div>
 
     <div class="field">

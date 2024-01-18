@@ -6,12 +6,52 @@
     display: flex;
     flex-direction: column;
     padding: 0 5rem 0 5rem;
+    margin-bottom: 10px;
 }
 
 .field_label {
     font-size: 13px;
     padding-block: 4px;
     display: inline-block;
+}
+
+.rating-label{
+    padding: 0 5rem 0 5rem;
+    font-size: 13px;
+    padding-block: 4px;
+    display: inline-block;
+}
+
+.category {
+    text-align: center;
+    padding: 8px;
+}
+
+.category select {
+    color: white;
+    background-color: #333;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.message{
+    position: fixed;
+    top:4%;
+    left: 50%;
+    transform: translate(-50%,-4%);
+    color: #F2B96F;
+    font-size: 1rem;
+}
+
+
+.field input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.85rem;
 }
 
 .field_input {
@@ -28,7 +68,17 @@
     line-height: 1.4;
 }
 
+.rating{
+    width: 100%;
+    padding: 0 5rem 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+}
+
 .btn-submit{
+    margin-top: 25px;
     padding: 5px;
     cursor: pointer;
     transform: translate(200%, 0%);
@@ -44,7 +94,13 @@
     .field{
         padding: 0 2rem 0 2rem;
     }
-    .btn-submit{
-        margin-top: -0.2rem;
+
+    .rating-label{
+        padding: 0 2rem 0 2rem;
     }
+
+    .rating{
+        padding: 0 2rem 0 2rem;
+    }
+
 }

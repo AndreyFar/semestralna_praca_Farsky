@@ -16,7 +16,7 @@ $layout = 'shop';
         <ul>
             <?php foreach($data['reviews'] as $review) :?>
                 <li class="review">
-                    <img src="<?= $review->getPicture() ?>" alt="#">
+                    <img src="<?= \App\Helpers\FileStorage::UPLOAD_DIR . '/' . $review->getPicture() ?>" alt="#">
                     <div class="review-info">
                         <div class="author"><?= $review->getUserName() ?><img src="<?= $review->getImagePath() ?>"></div>
                         <div class="message"><?= $review->getComment() ?></div>
