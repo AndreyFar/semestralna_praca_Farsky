@@ -12,7 +12,7 @@ $layout = 'auth';
     <div class="message">
         <?= @$data['message'] ?>
     </div>
-    <form class="form-signin" method="post" action="<?= $link->url("user.add") ?>">
+    <form class="form-signin" method="post" action="<?= $link->url("auth.register") ?>">
         <div class="form-label">
             <input name="login" type="text" id="login" class="form-control" placeholder="Username" required autofocus>
         </div>

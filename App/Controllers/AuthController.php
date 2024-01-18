@@ -6,6 +6,7 @@ use App\Config\Configuration;
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
 use App\Core\Responses\ViewResponse;
+use App\Models\User;
 
 /**
  * Class AuthController
@@ -54,6 +55,46 @@ class AuthController extends AControllerBase
 
     public function register(): Response
     {
+        $formData = $this->app->getRequest()->getPost();
+        $users=User::getAll();
+        $message="";
+
+        if (isset($formData['submit'])) {
+            foreach ($users as $pom) {
+                if ($pom->getName() == $formData['login']) {
+                    $message="This name, already in use";
+                    break;
+                }
+            }
+            if($message != ""){
+                return $this->html([
+                    'message'=>$message
+                ]);
+            }
+
+            if($formData['password'] != $formData['confirm_password']){
+                $message="Password and confirm password are not the same";
+                return $this->html([
+                    'message'=>$message
+                ]);
+            }
+
+            $user = new User();
+            $user->setName($formData['login']);
+
+            //hashovanie hesla
+            $loginHeslo=$formData['password'];
+            $nasada = bin2hex(random_bytes(16));
+            $hashHesla=password_hash($nasada . $loginHeslo, PASSWORD_DEFAULT);
+
+            $user->setNasada($nasada);
+            $user->setPassword($hashHesla);
+            $user->setIsAdmin($formData['code']);
+            $user->save();
+
+            return $this->redirect($this->url("auth.login"));
+
+        }
         return $this->html();
     }
 }

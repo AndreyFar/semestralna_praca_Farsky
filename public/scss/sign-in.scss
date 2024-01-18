@@ -2,7 +2,7 @@ $basic-color: white;
 
 .container{
     top: 45%;
-    height: 380px;
+    height: 450px;
 
     .question{
       color: $basic-color;
@@ -16,6 +16,6 @@ $basic-color: white;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 0.65rem;
-      color: white;
+      color: $basic-color;
     }
 }
