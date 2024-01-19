@@ -9,7 +9,7 @@
 }
 .container .home {
   position: absolute;
-  top: 96%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.65rem;
