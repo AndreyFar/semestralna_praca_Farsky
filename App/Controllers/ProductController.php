@@ -26,7 +26,12 @@ class ProductController extends AControllerBase
 
     public function show(): Response
     {
-        return $this->html();
+        $id = (int) $this->request()->getValue('id');
+        $product = Product::getOne($id);
+
+        return $this->html([
+            'product'=>$product
+        ]);
     }
 
     public function filter(): Response

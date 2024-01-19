@@ -29,7 +29,7 @@ $layout = 'shop';
         <ul class="products-wraper">
             <?php foreach($data['products'] as $product) :?>
                 <li class="product">
-                    <a href="<?=$link->url('product.show')?>"><img src="<?=$product->getPicture1()?>"></a>
+                    <a href="<?=$link->url('product.show', ['id'=>$product->getId()])?>"><img src="<?=$product->getPicture1()?>"></a>
                     <div class="product-info">
                         <div class="title"><?= $product->getTitle()?></div>
                         <div class="price"><?= $product->getPrice()?>€</div>

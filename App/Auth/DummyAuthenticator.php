@@ -43,6 +43,7 @@ class DummyAuthenticator implements IAuthenticator
         // Kontrola, či sa používateľ našiel a heslo sa zhoduje
         if ($user && password_verify($user->getNasada() . $password, $user->getPassword())) {
             //Prihlásenie úspešné, uloženie informácií do session
+            $_SESSION['id'] = $user->getId();
             $_SESSION['user'] = $user->getName();
             $_SESSION['admin'] = $user->getIsAdmin();
             return true;
@@ -86,7 +87,15 @@ class DummyAuthenticator implements IAuthenticator
      */
     public function getLoggedUserContext(): mixed
     {
-        return null;
+        $user = User::getOne($this->getLoggedUserId());
+        return $user->getItemsCount();
+    }
+
+    public function setLoggedUserContext(): void
+    {
+        $user = User::getOne($this->getLoggedUserId());
+        $count = $user->getItemsCount() + 1;
+        $user->setItemsCount($count);
     }
 
     /**
@@ -104,6 +113,6 @@ class DummyAuthenticator implements IAuthenticator
      */
     public function getLoggedUserId(): mixed
     {
-        return $_SESSION['user'];
+        return $_SESSION['id'];
     }
 }

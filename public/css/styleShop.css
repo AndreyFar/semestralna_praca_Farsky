@@ -272,6 +272,7 @@ footer .nickname-2 {
     .main-content {
         width: 100%;
         margin: 0;
+        border: none;
     }
 
     .collection {

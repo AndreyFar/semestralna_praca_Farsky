@@ -12,13 +12,13 @@ $second-color:#F2B96F;
 
     .show-image {
       width: 100%;
-      border: 5px solid $second-color;
     }
 
     .other-images {
       display: flex;
+      justify-content: space-between;
       img{
-        width: 50%;
+        width: 33.25%;
       }
 
       img:hover{
@@ -26,9 +26,11 @@ $second-color:#F2B96F;
         cursor: crosshair;
       }
 
+      .active{
+        border: 3px solid $second-color
+      }
     }
   }
-
 
 
   .block-info{
@@ -70,7 +72,9 @@ $second-color:#F2B96F;
     }
 
     .btn-add-to-cart{
-      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background-color: #333;
       padding: 8px;
       border: none;
@@ -81,9 +85,49 @@ $second-color:#F2B96F;
       margin: 10px 0 20px 0;
     }
 
+    a{
+      color: $primary-color;
+    }
+
+    .btn-add-to-cart:hover{
+      border: 2px solid $second-color;
+    }
+
     .description{
 
     }
 
   }
+}
+
+@media screen and (max-width: 755px){
+  .container{
+
+    .block-images{
+      margin-top: 20px;
+      width: 100%;
+      padding: 5px;
+      align-items: center;
+
+      .show-image {
+        width: 100%;
+      }
+
+      .other-images {
+        display: flex;
+        justify-content: space-between;
+        img{
+          width: 33.25%;
+        }
+
+      }
+    }
+
+    .block-info{
+      margin-top: 20px;
+      width: 100%;
+      padding: 5px;
+    }
+  }
+
 }

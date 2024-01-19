@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
+use App\Models\Message;
 
 /**
  * Class HomeController
@@ -38,7 +39,22 @@ class HomeController extends AControllerBase
 
     public function contact(): Response
     {
-        return $this->html();
+        $formData = $this->app->getRequest()->getPost();
+        $message="";
+        if (isset($formData['submit'])) {
+            $message = new Message();
+
+            $message->setAuthor($this->app->getAuth()->getLoggedUserName());
+            $message->setEmail($this->request()->getValue('email'));
+            $message->setMessage($this->request()->getValue('message'));
+            $message->setSentAt(date("Y-m-d H:i:s"));
+
+            $message->save();
+            $message="Message sent succesfully";
+        }
+        return $this->html([
+            'message'=>$message
+        ]);
     }
 
     public function ship(): Response

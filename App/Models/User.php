@@ -12,6 +12,18 @@ class User extends Model
     protected ?string $isAdmin;
     protected ?string $nasada;
 
+    protected int $itemsCount;
+
+    public function getItemsCount(): int
+    {
+        return $this->itemsCount;
+    }
+
+    public function setItemsCount(int $itemsCount): void
+    {
+        $this->itemsCount = $itemsCount;
+    }
+
     public function getNasada(): ?string
     {
         return $this->nasada;

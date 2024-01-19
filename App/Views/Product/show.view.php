@@ -9,15 +9,16 @@ $layout = 'shop';
 
 <div class="container">
     <div class="block-images">
-        <img src="public/images/vesta_main.jpg" class="show-image">
+        <img src="<?= @$data['product']->getPicture1()?>" class="show-image" id="mainImage">
         <div class="other-images">
-            <img src="public/images/vesta_second.jpg">
-            <img src="public/images/vesta_third.jpg">
+            <img src="<?= @$data['product']->getPicture1()?>" class="active" onclick="changeMainImage(this, '<?= @$data['product']->getPicture1()?>')">
+            <img src="<?= @$data['product']->getPicture2()?>" onclick="changeMainImage(this, '<?= @$data['product']->getPicture2()?>')">
+            <img src="<?= @$data['product']->getPicture3()?>" onclick="changeMainImage(this, '<?= @$data['product']->getPicture3()?>')">
         </div>
     </div>
     <div class="block-info">
-        <div class="title">NORTH FACE VEST</div>
-        <div class="price">189€</div>
+        <div class="title"><?= @$data['product']->getTitle()?></div>
+        <div class="price"><?= @$data['product']->getPrice()?>€</div>
         <div class="info">Tax included. Shipping calculated at checkout.</div>
         <h4>Size</h4>
         <div class="size">
@@ -28,8 +29,9 @@ $layout = 'shop';
                 <option value="xlarge">xlarge</option>
             </select>
         </div>
-        <button type="submit" class="btn-add-to-cart">ADD TO CART</button>
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Accusantium ad animi beatae consectetur deseruntvitae.</div>
+        <div class="btn-add-to-cart"><a href="<?= $link->url('item.index')?>">ADD TO CART</a></div>
+        <div class="description"><?= @$data['product']->getDescription()?></div>
     </div>
 </div>
+
+<script src="public/js/script-set-image.js"></script>

@@ -90,6 +90,7 @@ class AuthController extends AControllerBase
             $user->setNasada($nasada);
             $user->setPassword($hashHesla);
             $user->setIsAdmin($formData['code']);
+            $user->setItemsCount(0);
             $user->save();
 
             return $this->redirect($this->url("auth.login"));
