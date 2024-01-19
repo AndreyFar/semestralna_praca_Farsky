@@ -58,13 +58,13 @@
             <li><a href="<?= $link->url('product.index') ?>">Shop</a></li>
             <li><a href="<?= $link->url('review.index') ?>">Feedback</a></li>
             <li><a href="<?= $link->url('home.ship') ?>">Shipping</a></li>
-            <li><a href="">Sizing</a></li>
+            <li><a href="<?= $link->url('home.size') ?>">Sizing</a></li>
             <?php if ($auth->isLogged() && $auth->isLoggedUserAdmin()) : ?>
                 <li><a href="<?= $link->url('message.index') ?>">Messages</a></li>
             <?php else : ?>
                 <li><a href="<?= $link->url('home.contact') ?>">Contact</a></li>
             <?php endif; ?>
-            <li><a href="">Legacy</a></li>
+            <li><a href="<?= $link->url('home.legacy') ?>">Legacy</a></li>
         </ul>
     </nav>
     <button class="menu-btn">MENU</button>

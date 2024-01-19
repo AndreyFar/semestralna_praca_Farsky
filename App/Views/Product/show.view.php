@@ -27,6 +27,7 @@ $layout = 'shop';
                 <option value="medium">medium</option>
                 <option value="large">large</option>
                 <option value="xlarge">xlarge</option>
+                <option value="xlarge">xxlarge</option>
             </select>
         </div>
         <div class="btn-add-to-cart"><a href="<?= $link->url('item.index')?>">ADD TO CART</a></div>

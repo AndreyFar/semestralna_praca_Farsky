@@ -3,9 +3,10 @@
 }
 
 .map h1 {
-  margin: 5px 0 5px 0;
   color: white;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .map i {
   color: white;
@@ -26,11 +27,10 @@
 @media screen and (max-width: 755px) {
   .main-content {
     border: none;
-    height: 80%;
+    height: 90%;
   }
 
   .map img {
-    top:55%;
     width: 80%;
   }
 }

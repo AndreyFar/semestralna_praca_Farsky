@@ -1,0 +1,36 @@
+.container-sizing {
+  color: white;
+}
+.container-sizing .top-container {
+  margin-bottom: 20px;
+}
+.container-sizing .top-container h1 {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.container-sizing .main-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-sizing .main-page-content h3 {
+  text-align: center;
+}
+.container-sizing .main-page-content table {
+  width: 468px;
+  height: 100px;
+  margin: 10px 0 25px 0;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+@media screen and (max-width: 755px) {
+  .container-sizing .main-page-content table {
+    width: 350px;
+  }
+}
+
+/*# sourceMappingURL=style-size.css.map */

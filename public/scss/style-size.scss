@@ -1,0 +1,48 @@
+
+
+.container-sizing{
+  color:white;
+  .top-container{
+    margin-bottom: 20px;
+    h1{
+      color: white;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  .main-page-content{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h3{
+      text-align: center;
+    }
+
+    table {
+      width: 468px;
+      height: 100px;
+      margin: 10px 0 25px 0;
+      border: 1px solid white;
+      padding: 10px;
+    }
+
+
+  }
+
+}
+
+@media screen and (max-width: 755px){
+
+  .container-sizing{
+    .main-page-content{
+      table{
+        width: 350px;
+      }
+    }
+  }
+}
