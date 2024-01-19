@@ -14,17 +14,7 @@ class ItemController extends AControllerBase
      */
     public function index(): Response
     {
-        $id=$this->app->getAuth()->getLoggedUserId();
-        $name=$this->app->getAuth()->getLoggedUserName();
-        $this->app->getAuth()->setLoggedUserContext();
-
-        $items=$this->app->getAuth()->getLoggedUserContext();
-
-        return $this->html([
-            'id'=>$id,
-            'name'=>$name,
-            'items'=>$items
-        ]);
+        return $this->html();
     }
 
     public function authorize($action):bool

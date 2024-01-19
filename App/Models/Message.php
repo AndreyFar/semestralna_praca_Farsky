@@ -9,6 +9,18 @@ class Message extends Model
     protected ?int $id;
     protected ?string $author;
     protected ?string $email;
+    protected ?string $phoneNumber;
+
+    public function getPhoneNumber(): ?string
+    {
+        return $this->phoneNumber;
+    }
+
+    public function setPhoneNumber(?string $phoneNumber): void
+    {
+        $this->phoneNumber = $phoneNumber;
+    }
+
     protected ?string $message;
     protected ?string $sentAt;
 

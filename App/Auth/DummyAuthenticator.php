@@ -87,15 +87,7 @@ class DummyAuthenticator implements IAuthenticator
      */
     public function getLoggedUserContext(): mixed
     {
-        $user = User::getOne($this->getLoggedUserId());
-        return $user->getItemsCount();
-    }
-
-    public function setLoggedUserContext(): void
-    {
-        $user = User::getOne($this->getLoggedUserId());
-        $count = $user->getItemsCount() + 1;
-        $user->setItemsCount($count);
+        return null;
     }
 
     /**

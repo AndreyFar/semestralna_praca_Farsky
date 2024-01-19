@@ -26,7 +26,7 @@
                 <a href="<?= $link->url('home.index') ?>" class="banner"></a>
                 <div class="cart">
                     <h3>CART</h3>
-                    <p><?= $auth->getLoggedUserContext()?> items in cart</p>
+                    <p>0 items in cart</p>
                     <div class="btns">
                         <a href="<?= $link->url('item.index') ?>" class="view-cart">view cart</a>
                         <a href="<?= $link->url('product.index') ?>" class="shop-more">shop more</a>
@@ -59,7 +59,11 @@
             <li><a href="<?= $link->url('review.index') ?>">Feedback</a></li>
             <li><a href="<?= $link->url('home.ship') ?>">Shipping</a></li>
             <li><a href="">Sizing</a></li>
-            <li><a href="<?= $link->url('home.contact') ?>">Contact</a></li>
+            <?php if ($auth->isLogged() && $auth->isLoggedUserAdmin()) : ?>
+                <li><a href="<?= $link->url('message.index') ?>">Messages</a></li>
+            <?php else : ?>
+                <li><a href="<?= $link->url('home.contact') ?>">Contact</a></li>
+            <?php endif; ?>
             <li><a href="">Legacy</a></li>
         </ul>
     </nav>

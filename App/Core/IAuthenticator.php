@@ -48,12 +48,6 @@ interface IAuthenticator
     public function getLoggedUserContext(): mixed;
 
     /**
-     * Set a context of logged user, e.g. user class instance
-     * @return mixed
-     */
-    public function setLoggedUserContext(): void;
-
-    /**
      * Return, if a user is logged or not
      * @return bool
      */

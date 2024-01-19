@@ -18,9 +18,15 @@ class HomeController extends AControllerBase
      * @param $action
      * @return bool
      */
-    public function authorize($action)
+    public function authorize($action):bool
     {
-        return true;
+        switch ($action) {
+            //ak chces poslat spravu, musis byt prihlaseny
+            case 'contact':
+                return $this->app->getAuth()->isLogged();
+            default:
+                return true;
+        }
     }
 
     /**
@@ -46,6 +52,7 @@ class HomeController extends AControllerBase
 
             $message->setAuthor($this->app->getAuth()->getLoggedUserName());
             $message->setEmail($this->request()->getValue('email'));
+            $message->setPhoneNumber($this->request()->getValue('number'));
             $message->setMessage($this->request()->getValue('message'));
             $message->setSentAt(date("Y-m-d H:i:s"));
 
@@ -58,6 +65,16 @@ class HomeController extends AControllerBase
     }
 
     public function ship(): Response
+    {
+        return $this->html();
+    }
+
+    public function size(): Response
+    {
+        return $this->html();
+    }
+
+    public function legacy(): Response
     {
         return $this->html();
     }
