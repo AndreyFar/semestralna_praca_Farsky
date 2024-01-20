@@ -87,16 +87,11 @@ class ProductController extends AControllerBase
         $newFileName = FileStorage::saveFile($this->request()->getFiles()['picture3']);
         $product->setPicture3($newFileName);
 
-        $product->setTitle($this->request()->getValue('title'));
+        $product->setTitle(strtoupper($this->request()->getValue('title')));
         $product->setCategory($this->request()->getValue('category'));
         $product->setDescription($this->request()->getValue('description'));
         $product->setPrice($this->request()->getValue('price'));
 
-        /*
-        $product->setPicture1($this->request()->getValue('picture1'));
-        $product->setPicture2($this->request()->getValue('picture2'));
-        $product->setPicture3($this->request()->getValue('picture3'));
-        */
 
         $product->save();
         return new RedirectResponse($this->url('product.index'));
