@@ -72,10 +72,31 @@ class AuthController extends AControllerBase
                 ]);
             }
 
-            if($formData['password'] != $formData['confirm_password']){
+            if($formData['password'] != $formData['confirm_password']) {
                 $message="Password and confirm password are not the same";
                 return $this->html([
                     'message'=>$message
+                ]);
+            }
+
+            if (!preg_match('/\d/', $formData['password'])) {
+                $message = "Password does not contain a number";
+                return $this->html([
+                    'message' => $message
+                ]);
+            }
+
+            if (strlen($formData['password']) < 6) {
+                $message = "The password is too short, minimum length 6 characters";
+                return $this->html([
+                    'message' => $message
+                ]);
+            }
+
+            if ($formData['code'] != '' && $formData['code'] != '123') {
+                $message = "The special code is incorrect, contact us";
+                return $this->html([
+                    'message' => $message
                 ]);
             }
 
