@@ -36,6 +36,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.map .map-container map area {
+  outline: 2px solid white;
+}
 
 @media screen and (max-width: 755px) {
   .main-content {
