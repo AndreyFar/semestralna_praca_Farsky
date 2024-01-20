@@ -11,7 +11,27 @@ $layout = 'shop';
     <div class="top-container">
         <h1>Sizing</h1>
         <div class="text">clothing does not fit oversized unless stated otherwise.</div>
-        <div>measurements in <strong>cm</strong></div>
+        <div>measurements in <strong class="bold">cm</strong></div>
+        <div class="instruction">find yours size: </div>
+        <div class="selects">
+            <div class="type">
+                <select id="categorySelect" name="category">
+                    <option value="tshirt">tshirt</option>
+                    <option value="hoodies">hoodies</option>
+                    <option value="pants">pants</option>
+                </select>
+            </div>
+            <div class="size">
+                <select id="sizeSelect" name="size">
+                    <option value="s">s</option>
+                    <option value="m">m</option>
+                    <option value="l">l</option>
+                    <option value="xl">xl</option>
+                    <option value="xxl">xxl</option>
+                </select>
+            </div>
+            <button onclick="highlightSize()">FIND</button>
+        </div>
     </div>
     <div class="main-page-content">
         <h3>T-Shirts</h3>
@@ -91,11 +111,11 @@ $layout = 'shop';
                 <tbody>
                 <tr>
                     <td style="width: 123px;"></td>
-                    <td style="width: 66px;">28</td>
-                    <td style="width: 60px;">30</td>
-                    <td style="width: 60px;">&nbsp;32</td>
-                    <td style="width: 71px;">34</td>
-                    <td style="width: 59.158050537109375px;">36</td>
+                    <td style="width: 66px;">s</td>
+                    <td style="width: 60px;">m</td>
+                    <td style="width: 60px;">&nbsp;l</td>
+                    <td style="width: 71px;">xl</td>
+                    <td style="width: 59.158050537109375px;">xxl</td>
                 </tr>
                 <tr>
                     <td style="width: 123px;">waist</td>
@@ -119,3 +139,5 @@ $layout = 'shop';
     </div>
 
 </div>
+
+<script src="public/js/script-find-size.js"></script>

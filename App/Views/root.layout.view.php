@@ -34,7 +34,7 @@
         <?php else : ?>
             <li><a href="<?= $link->url('home.contact') ?>">Contact</a></li>
         <?php endif; ?>
-        <li><a href="<?= $link->url('home.legacy') ?>">Legacy</a></li>
+        <li><a href="<?= $link->url('home.legacy') ?>">Faq</a></li>
     </ul>
 </nav>
 

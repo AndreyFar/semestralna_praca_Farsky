@@ -26,7 +26,7 @@
                 <a href="<?= $link->url('home.index') ?>" class="banner"></a>
                 <div class="cart">
                     <h3>CART</h3>
-                    <p>0 items in cart</p>
+                    <p>view the items</p>
                     <div class="btns">
                         <a href="<?= $link->url('item.index') ?>" class="view-cart">view cart</a>
                         <a href="<?= $link->url('product.index') ?>" class="shop-more">shop more</a>
@@ -64,7 +64,7 @@
             <?php else : ?>
                 <li><a href="<?= $link->url('home.contact') ?>">Contact</a></li>
             <?php endif; ?>
-            <li><a href="<?= $link->url('home.legacy') ?>">Legacy</a></li>
+            <li><a href="<?= $link->url('home.legacy') ?>">Faq</a></li>
         </ul>
     </nav>
     <button class="menu-btn">MENU</button>

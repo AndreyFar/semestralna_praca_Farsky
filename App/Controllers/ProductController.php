@@ -36,29 +36,20 @@ class ProductController extends AControllerBase
 
     public function filter(): Response
     {
-        $products = Product::getAll();
         $category = $this->request()->getValue('category');
-        $filteredProducts = [];
 
-        //filtrovanie produktov podla kategorie
-        if ($category == 'all'){
-            $filteredProducts = $products;
-        } else {
-            foreach ($products as $product) {
-                if ($product->getCategory() == $category) {
-                    $filteredProducts[] = $product;
-                }
-            }
+        if($category == 'all'){
+            $filteredProducts = Product::getAll();
+        } else{
+            $filteredProducts = Product::getAll("category = '" . $category . "'");
         }
-        $message="";
+
         if(empty($filteredProducts)){
             $message="There are no items from " . $category . " category";
+            return  $this->json(array("message" => $message));
         }
 
-        return $this->html([
-            'products'=>$filteredProducts,
-            'message'=>$message
-        ]);
+        return $this->json($filteredProducts);
     }
 
     public function delete(): Response

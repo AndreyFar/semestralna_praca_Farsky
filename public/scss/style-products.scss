@@ -30,6 +30,10 @@ $second-color: #F2B96F;
     a{
       color: $primary-color;
     }
+    a:hover{
+      cursor: pointer;
+      color: $second-color;
+    }
   }
 
   .message{
@@ -84,6 +88,11 @@ $second-color: #F2B96F;
 
 @media screen and (max-width: 1070px){
   .container-products{
+
+    .message{
+      text-align: center;
+    }
+
     .products{
       .products-wraper{
         display: grid;

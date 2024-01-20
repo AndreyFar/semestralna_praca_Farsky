@@ -35,7 +35,7 @@
     <div class="rating">
         <div class="dot">
             <input type="radio" id="star5" name="rating" value="5" required>
-            <label for="star5">5</label>
+            <label for="star5">5 (top)</label>
         </div>
 
         <div class="dot">

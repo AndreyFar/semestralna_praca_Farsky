@@ -8,6 +8,19 @@
   margin-top: 30px;
   margin-bottom: 10px;
 }
+.map h3 {
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.map h5 {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-size: 0.75rem;
+}
 .map i {
   color: white;
   width: 5px;

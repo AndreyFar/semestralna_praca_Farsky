@@ -24,6 +24,10 @@
 .container-products .filter a {
   color: white;
 }
+.container-products .filter a:hover {
+  cursor: pointer;
+  color: #F2B96F;
+}
 .container-products .message {
   position: fixed;
   top: 4%;
@@ -67,6 +71,9 @@
 }
 
 @media screen and (max-width: 1070px) {
+  .container-products .message {
+    text-align: center;
+  }
   .container-products .products .products-wraper {
     display: grid;
     grid-template-columns: repeat(3, 142px);
