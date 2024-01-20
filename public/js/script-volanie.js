@@ -25,7 +25,8 @@ async function getCategoryProducts(category) {
 
             // Vytvor obsah produktu
             productItem.innerHTML = `
-                    <a href="?c=product&a=show&id=${product.id}"><img src="${product.picture1}"></a>
+                    <a href="?c=product&a=show&id=${product.id}"><img src="${'public/uploads/' + product.picture1}"></a>
+
                     <div class="product-info">
                         <div class="title">${product.title}</div>
                         <div class="price">${product.price}€</div>

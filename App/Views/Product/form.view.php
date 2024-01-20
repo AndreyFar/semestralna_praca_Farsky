@@ -38,17 +38,17 @@
 
     <div class="field">
         <label class="field_label" for="picture" class="form-label">Picture source 1</label>
-        <input class="field_input" type="text" id="picture1" name="picture1" value="" required>
+        <input type="file" id="picture1" name="picture1" required>
     </div>
 
     <div class="field">
         <label class="field_label" for="picture" class="form-label">Picture source 2</label>
-        <input class="field_input" type="text" id="picture2" name="picture2" value="" required>
+        <input type="file" id="picture2" name="picture2" required>
     </div>
 
     <div class="field">
         <label class="field_label" for="picture" class="form-label">Picture source 3</label>
-        <input class="field_input" type="text" id="picture3" name="picture3" value="" required>
+        <input type="file" id="picture3" name="picture3" required>
     </div>
 
     <button type="submit" class="btn-submit">Submit</button>

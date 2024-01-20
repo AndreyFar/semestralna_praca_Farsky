@@ -8,6 +8,3 @@ $layout = 'shop';
 <link rel="stylesheet" href="public/css/style-cart.css">
 
 <h1>KOSIK</h1>
-<p><?= $data['id']?></p>
-<p><?= $data['name']?></p>
-<p><?= $data['items']?></p>

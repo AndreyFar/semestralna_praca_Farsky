@@ -6,6 +6,7 @@ use App\Core\AControllerBase;
 use App\Core\HTTPException;
 use App\Core\Responses\RedirectResponse;
 use App\Core\Responses\Response;
+use App\Helpers\FileStorage;
 use App\Models\Product;
 
 class ProductController extends AControllerBase
@@ -74,14 +75,28 @@ class ProductController extends AControllerBase
     {
         $product = new Product();
 
+        $product->setPicture1($this->request()->getFiles()['picture1']['name']);
+        $newFileName = FileStorage::saveFile($this->request()->getFiles()['picture1']);
+        $product->setPicture1($newFileName);
+
+        $product->setPicture2($this->request()->getFiles()['picture2']['name']);
+        $newFileName = FileStorage::saveFile($this->request()->getFiles()['picture2']);
+        $product->setPicture2($newFileName);
+
+        $product->setPicture3($this->request()->getFiles()['picture3']['name']);
+        $newFileName = FileStorage::saveFile($this->request()->getFiles()['picture3']);
+        $product->setPicture3($newFileName);
+
         $product->setTitle($this->request()->getValue('title'));
         $product->setCategory($this->request()->getValue('category'));
         $product->setDescription($this->request()->getValue('description'));
         $product->setPrice($this->request()->getValue('price'));
 
+        /*
         $product->setPicture1($this->request()->getValue('picture1'));
         $product->setPicture2($this->request()->getValue('picture2'));
         $product->setPicture3($this->request()->getValue('picture3'));
+        */
 
         $product->save();
         return new RedirectResponse($this->url('product.index'));

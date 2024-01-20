@@ -9,11 +9,11 @@ $layout = 'shop';
 
 <div class="container">
     <div class="block-images">
-        <img src="<?= @$data['product']->getPicture1()?>" class="show-image" id="mainImage">
+        <img src="<?= \App\Helpers\FileStorage::UPLOAD_DIR . '/' . @$data['product']->getPicture1()?>" class="show-image" id="mainImage">
         <div class="other-images">
-            <img src="<?= @$data['product']->getPicture1()?>" class="active" onclick="changeMainImage(this, '<?= @$data['product']->getPicture1()?>')">
-            <img src="<?= @$data['product']->getPicture2()?>" onclick="changeMainImage(this, '<?= @$data['product']->getPicture2()?>')">
-            <img src="<?= @$data['product']->getPicture3()?>" onclick="changeMainImage(this, '<?= @$data['product']->getPicture3()?>')">
+            <img src="<?= \App\Helpers\FileStorage::UPLOAD_DIR . '/' . @$data['product']->getPicture1()?>" class="active" onclick="changeMainImage(this, '<?= \App\Helpers\FileStorage::UPLOAD_DIR . '/' . @$data['product']->getPicture1()?>')">
+            <img src="<?= \App\Helpers\FileStorage::UPLOAD_DIR . '/' . @$data['product']->getPicture2()?>" onclick="changeMainImage(this, '<?= \App\Helpers\FileStorage::UPLOAD_DIR . '/' . @$data['product']->getPicture2()?>')">
+            <img src="<?= \App\Helpers\FileStorage::UPLOAD_DIR . '/' . @$data['product']->getPicture3()?>" onclick="changeMainImage(this, '<?= \App\Helpers\FileStorage::UPLOAD_DIR . '/' . @$data['product']->getPicture3()?>')">
         </div>
     </div>
     <div class="block-info">
