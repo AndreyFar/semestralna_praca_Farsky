@@ -30,7 +30,7 @@ $layout = 'shop';
                 <option value="xlarge">xxlarge</option>
             </select>
         </div>
-        <div class="btn-add-to-cart"><a href="<?= $link->url('item.index')?>">ADD TO CART</a></div>
+        <div class="btn-add-to-cart"><a href="<?= $link->url('item.add', ['id'=>$data['product']->getId()])?>">ADD TO CART</a></div>
         <div class="description"><?= @$data['product']->getDescription()?></div>
     </div>
 </div>

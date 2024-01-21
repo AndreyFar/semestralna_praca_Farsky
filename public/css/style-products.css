@@ -69,6 +69,13 @@
   color: black;
   z-index: 2;
 }
+.container-products .products .product .btn-edit {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  color: black;
+  z-index: 2;
+}
 
 @media screen and (max-width: 1070px) {
   .container-products .message {

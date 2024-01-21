@@ -36,6 +36,7 @@ $layout = 'shop';
                     </div>
                     <?php if ($auth->isLogged()&&$auth->isLoggedUserAdmin()) : ?>
                         <div class="buttons">
+                            <a href="<?= $link->url('product.edit', ['id'=>$product->getId()])?>" class="btn-edit"><strong>E</strong></a>
                             <a href="<?= $link->url('product.delete', ['id'=>$product->getId()])?>" class="btn-delete"><strong>X</strong></a>
                         </div>
                     <?php else : ?>

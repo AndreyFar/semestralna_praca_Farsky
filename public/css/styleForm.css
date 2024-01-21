@@ -77,6 +77,10 @@
     text-align: center;
 }
 
+.org-rate{
+    font-size: 1rem;
+}
+
 .btn-submit{
     margin-top: 25px;
     padding: 8px 5px;

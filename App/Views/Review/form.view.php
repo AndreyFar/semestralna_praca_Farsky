@@ -21,9 +21,9 @@
     <div class="field">
         <label class="field_label" for="picture" class="form-label">Picture source</label>
         <?php if (@$data['review']?->getPicture() != ""): ?>
-            <div>Pôvodný súbor: <?= substr($data['review']->getPicture(), strpos($data['review']->getPicture(), '-') + 1)  ?></div>
+            <div>Original source: <?= substr($data['review']->getPicture(), strpos($data['review']->getPicture(), '-') + 1)  ?></div>
         <?php endif; ?>
-        <input type="file" id="picture" name="picture">
+        <input type="file" id="picture" name="picture" required>
     </div>
 
     <div class="field">
@@ -31,7 +31,13 @@
         <textarea class="field_input" id="comment" name="comment" rows="3" maxlength="50" required><?= @$data['review']?->getComment() ?></textarea>
     </div>
 
-    <label class="rating-label" for="">Rating</label>
+    <div class="field">
+        <label class="field_label" for="">Rating</label>
+        <?php if (@$data['review']?->getRating() != ""): ?>
+            <div class="org-rate">Original rating: <?= @$data['review']?->getRating() ?></div>
+        <?php endif; ?>
+    </div>
+
     <div class="rating">
         <div class="dot">
             <input type="radio" id="star5" name="rating" value="5" required>

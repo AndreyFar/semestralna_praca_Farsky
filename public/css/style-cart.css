@@ -1,5 +1,87 @@
-* {
+h1 {
   color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.pom {
+  color: white;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.container-items {
+  color: white;
+  display: flex;
+  gap: 10px;
+}
+.container-items .message {
+  position: fixed;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -4%);
+  color: #F2B96F;
+  font-size: 1rem;
+}
+.container-items .items {
+  width: 100%;
+}
+.container-items .items .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  padding: 5px 15px 5px 5px;
+  margin-bottom: 5px;
+  background-color: rgba(203, 203, 203, 0.52);
+  position: relative;
+}
+.container-items .items .item img {
+  width: 20%;
+}
+.container-items .items .item .item-info {
+  width: 100px;
+}
+.container-items .items .item .count {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+.container-items .items .item .count button {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  width: 35px;
+  height: 40px;
+  cursor: pointer;
+}
+.container-items .items .item a {
+  color: red;
+}
+
+.checkout {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid white;
+}
+.checkout .total-price {
+  font-size: 1.5rem;
+  display: flex;
+}
+.checkout .total-price .orange {
+  color: #F2B96F;
 }
 
 /*# sourceMappingURL=style-cart.css.map */

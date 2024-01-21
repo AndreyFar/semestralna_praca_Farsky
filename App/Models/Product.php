@@ -11,7 +11,6 @@ class Product extends Model
     protected ?string $category;
     protected ?int $price;
     protected ?string $description;
-    protected ?string $size;
     protected ?string $picture1;
     protected ?string $picture2;
     protected ?string $picture3;
@@ -64,16 +63,6 @@ class Product extends Model
     public function setDescription(?string $description): void
     {
         $this->description = $description;
-    }
-
-    public function getSize(): ?string
-    {
-        return $this->size;
-    }
-
-    public function setSize(?string $size): void
-    {
-        $this->size = $size;
     }
 
     public function getPicture1(): ?string

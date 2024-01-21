@@ -71,9 +71,27 @@ class ProductController extends AControllerBase
         return $this->html();
     }
 
+    public function edit(): Response
+    {
+        $id = (int)$this->request()->getValue('id');
+        $product = Product::getOne($id);
+
+        if (is_null($product)) {
+            throw new HTTPException(404);
+        }
+        return $this->html([
+            'product'=> $product
+        ]);
+    }
+
     public function save(): Response
     {
-        $product = new Product();
+        $id = (int)$this->request()->getValue('id');
+        $product = Product::getOne($id);
+
+        if (is_null($product)) {
+            $product = new Product();
+        }
 
         $product->setPicture1($this->request()->getFiles()['picture1']['name']);
         $newFileName = FileStorage::saveFile($this->request()->getFiles()['picture1']);
