@@ -26,7 +26,7 @@ $layout = 'shop';
                         <div class="count"><?= $item->getCount() ?></div>
                         <button class="plus">+</button>
                     </div>
-                    <div class="price"><?= $item->getPrice() ?>€</div>
+                    <div class="price" id="price"><?= $item->getPrice() ?>€</div>
                     <a href="<?= $link->url('item.delete', ['id'=>$item->getId()])?>" class="btn-delete">X</a>
                 </li>
             <?php endforeach?>
@@ -36,7 +36,9 @@ $layout = 'shop';
 <div class="checkout">
     <div>Total price:</div>
     <div class="total-price">
-        <div class="orange">0</div>
+        <div class="orange" id="totalPrice">0</div>
         <div>€</div>
     </div>
 </div>
+
+<script src="public/js/script-sum-cart.js"></script>
