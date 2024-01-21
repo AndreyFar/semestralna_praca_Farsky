@@ -37,6 +37,7 @@ class ItemController extends AControllerBase
         switch ($action) {
             //ak chces pridavat produkt do kosiku, musis byt prihlaseny
             case 'index':
+            case 'add':
                 return $this->app->getAuth()->isLogged();
             default:
                 return true;

@@ -6,8 +6,8 @@ $layout = 'auth';
 <link rel="stylesheet" href="public/css/after-logout.css">
 
 <div class="container">
-    Odhlásili ste sa.
+    You have signed out.
     <br>
-    Znovu <a href="<?= \App\Config\Configuration::LOGIN_URL ?>">prihlásiť</a>
-    alebo vrátiť sa <a href="<?= $link->url("home.index") ?>">späť</a> na hlavnú stránku?
+    <a href="<?= \App\Config\Configuration::LOGIN_URL ?>">Log in</a> again
+    or go <a href="<?= $link->url("home.index") ?>">back</a> to the main page?
 </div>

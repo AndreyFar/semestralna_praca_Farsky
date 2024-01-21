@@ -6,7 +6,7 @@
 
 <div class="<?php echo $auth->isLogged() ? 'welcome' : 'login'; ?>">
     <?php if ($auth->isLogged()) : ?>
-        Vitajte, <?= $auth->getLoggedUserName() ?>
+        Welcome, <?= $auth->getLoggedUserName() ?>
         <br>
         <a href="<?= $link->url('auth.logout')?>" class="button-54">Log out</a>
     <?php else : ?>
